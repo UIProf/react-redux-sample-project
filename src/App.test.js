@@ -1,11 +1,11 @@
 import React from 'react';
 import App from './App';
 import ProgressBar from './components/Progress-bar';
+import Buttons from './components/Buttons';
 
 describe('App', () => {
 
     let wrapper;
-    const buttons = [-18, -13, 10, 38];
 
     beforeEach(() => {
       wrapper = shallow(
@@ -24,6 +24,10 @@ describe('App', () => {
     });
 
     test("App should render four buttons", () => {
-      expect(wrapper.find("button").length).toBe(4);
+      expect(wrapper.find(Buttons).length).toBe(1);
+    })
+
+    test("App should render a Select Element", () => {
+      expect(wrapper.find(".bar-handler > .selectbox").length).toBe(1);
     })
 });
