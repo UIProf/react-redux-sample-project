@@ -66,9 +66,6 @@ App.propTypes = {
   buttons: PropTypes.array,
   limit: PropTypes.number,
   fetchAppData: PropTypes.func,
-
-};
-
-
+}
 
 export default App;

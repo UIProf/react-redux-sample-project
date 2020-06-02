@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from "react-redux";
+import PropTypes from "prop-types";
 
 const Buttons = ({decreaseProgressBar, increaseProgressBar }) => {
 
@@ -26,5 +27,11 @@ const Buttons = ({decreaseProgressBar, increaseProgressBar }) => {
     </>
   );
 };
+
+Buttons.propTypes = {
+  buttons: PropTypes.array,
+  decreaseProgressBar: PropTypes.func,
+  increaseProgressBar: PropTypes.func
+}
 
 export default Buttons;

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useSelector } from "react-redux";
+import PropTypes from "prop-types";
 
 const ProgressBar = () => {
     const Bars = useSelector(state => state.appReducer.bars);
@@ -22,6 +23,11 @@ const ProgressBar = () => {
       })}
     </div>
   );
+}
+
+Buttons.propTypes = {
+  Bars: PropTypes.array,
+  limit: PropTypes.array
 };
 
 export default ProgressBar
