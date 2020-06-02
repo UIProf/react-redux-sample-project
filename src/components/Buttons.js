@@ -1,6 +1,10 @@
 import React from 'react'
+import { useSelector } from "react-redux";
 
-const Buttons = ({ buttons, decreaseProgressBar, increaseProgressBar }) => {
+const Buttons = ({decreaseProgressBar, increaseProgressBar }) => {
+
+   const buttons = useSelector(state => state.appReducer.buttons);
+
   return (
     <>
       {buttons.map((button, index) => {
@@ -12,7 +16,7 @@ const Buttons = ({ buttons, decreaseProgressBar, increaseProgressBar }) => {
             className="btn-p"
             type="button"
             value={button}
-            onClick={clickEvent}
+            onClick={(e) => clickEvent(e)}
             key={index}
           >
             {button}
